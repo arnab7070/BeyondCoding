@@ -1,1 +1,0 @@
-{"name":"Local: triangle","url":"c:\\Users\\ACER\\Desktop\\Beyond Coding\\triangle.c","tests":[{"id":1657472474382,"input":"5 4 3","output":"The triangle is possible."}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ACER\\Desktop\\Beyond Coding\\triangle.c","group":"local","local":true}
