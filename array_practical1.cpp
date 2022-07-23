@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 int arr[2000];
 void display(int arr[], int n)
