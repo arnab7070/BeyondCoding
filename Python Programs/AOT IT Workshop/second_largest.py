@@ -12,4 +12,4 @@ for i in lst:
     if secondlargest<i:
         if i < largest:
             secondlargest = i
-print(secondlargest)
+print(f"The second largest element is {secondlargest}")
