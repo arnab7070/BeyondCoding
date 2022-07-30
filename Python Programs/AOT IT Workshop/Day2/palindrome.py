@@ -15,4 +15,3 @@ while True:
         print("Palindrome")
     else:
         print("Not Palindrome")
-              
