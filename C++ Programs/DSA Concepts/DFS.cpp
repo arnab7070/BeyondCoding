@@ -21,7 +21,7 @@ int A[7][7] = {
   5     6 
 */
 void DFS(int i){
-    cout<<i;
+    cout<<i<<" ";
     visited[i]=1;
     for(int j = 0; j < 7; j++){
         if(A[i][j]==1 && !visited[j]){
