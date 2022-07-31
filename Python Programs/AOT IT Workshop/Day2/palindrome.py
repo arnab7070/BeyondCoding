@@ -1,6 +1,6 @@
 print("Enter the values to check Palindrome, type 'q' to exit")
 while True:
-    num = input()
+    num = str(input())
     if num=='q':
         break
     digit = len(num)
