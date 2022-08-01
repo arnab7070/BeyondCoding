@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include <climits>
 using namespace std;
 #define n 5
 int arr[n];
