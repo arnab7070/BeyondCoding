@@ -8,8 +8,10 @@ using namespace std;
 // } Driver Code Ends
 //User function Template for C++
 
+
 class Solution{
 public:
+
     long long findMinSum(vector<int> &A,vector<int> &B,int N){
         sort(A.begin(),A.end());
         sort(B.begin(),B.end());
