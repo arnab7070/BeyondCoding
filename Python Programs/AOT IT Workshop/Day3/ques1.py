@@ -9,7 +9,7 @@ while 1:
             flag=1
         else:
             i += 1
-    
+
     if flag==0:
         break
 if len(string)>0:
