@@ -102,7 +102,7 @@ int main()
                 cout<<"Queue is full"<<endl;
             }
             else{
-                cout<<"We can still have memory to insert elements";
+                cout<<"We still have memory to insert elements"<<endl;
             }
             break;
         case 6:
