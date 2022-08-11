@@ -21,7 +21,7 @@ string infixToPostfix(string str){
     string ans;
     stack<char> st;
     for(int i = 0; i < str.length(); i++){
-        if((str[i]>='a'&&str[i]<='z')||(str[i]>='A'&&str[i]<='Z')){
+        if((str[i]>='a'&&str[i]<='z')||(str[i]>='A'&&str[i]<='Z')||(str[i]>='0'&&str[i]<='9')){
             ans+=str[i];
         }
         else if(str[i]=='('){
