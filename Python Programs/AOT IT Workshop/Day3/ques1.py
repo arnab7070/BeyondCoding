@@ -1,4 +1,4 @@
-string = raw_input("Enter your string: ")
+string = input("Enter your string: ")
 
 while 1:
     i = 0
