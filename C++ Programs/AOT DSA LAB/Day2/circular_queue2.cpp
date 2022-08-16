@@ -84,5 +84,9 @@ int main() {
     q.deque();
     q.deque();
     q.display();
+    q.enque(2); // 2
+    q.enque(3); // 3
+    q.enque(4);
+    q.display();
     return 0;
 }
