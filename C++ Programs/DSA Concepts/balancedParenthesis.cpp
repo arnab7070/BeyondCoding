@@ -10,7 +10,7 @@ void balancedParenthesis(string s){
         if(s[i]=='('||s[i]=='{'||s[i]=='['){
             st.push(s[i]);
         }
-        else if (s[i]==')'&&st.top()=='('||s[i]=='}'&&st.top()=='{'||s[i]==']'&&st.top()=='[')
+        else if ((s[i]==')'&&st.top()=='('||s[i]=='}'&&st.top()=='{'||s[i]==']'&&st.top()=='[')&&!st.empty())
         {
             st.pop();
         }
