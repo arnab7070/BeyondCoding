@@ -5,9 +5,9 @@ dict1 = {
 }
 
 dict2 = {
+"Thirty":"30",
 "Forty":"40",
 "Fifty":"50",
-"Sixty":"60"
 }
 dict1.update(dict2)
 print(dict1)
