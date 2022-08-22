@@ -1,14 +1,6 @@
-dict1 = {
-"a":100,
-"b":200,
-"c":300
-}
-check = 0
-for i in dict1.values():
-	# if(i==500):
-	if(i==200): 
-		check = 1
-		print("True")
-		break
-if(check==0):
-	print("False")
+keys = ["Ten","Twenty","Thirty"]
+values = [10,20,30]
+d1 = {}
+for i in range(3):
+	d1[keys[i]] = values[i]  
+print(d1)

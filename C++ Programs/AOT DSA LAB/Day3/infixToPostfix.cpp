@@ -52,7 +52,9 @@ string infixToPostfix(string str){
 }
 int main()
 {
-    string equation = "(a+b*c)+(a-b/c)";
+    string equation;
+    cout<<"Enter Infix Expression: ";
+    cin>>equation;
     cout<<infixToPostfix(equation)<<endl;
     return 0;
 }

@@ -1,4 +1,13 @@
-sampleDict = {"name": "Kelly",  "age":25,  "salary": 8000,  "city": "New york"}
-sampleDict.popitem() #Popped the last element
-sampleDict.update({"location":"New york"}) #Updated city to location
-print(sampleDict)
+dict1 = {
+"Ten":"10",
+"Twenty":"20",
+"Thirty":"30"
+}
+
+dict2 = {
+"Forty":"40",
+"Fifty":"50",
+"Sixty":"60"
+}
+dict1.update(dict2)
+print(dict1)

@@ -1,6 +1,3 @@
-keys = ["Ten","Twenty","Thirty"]
-values = [10,20,30]
-d1 = {}
-for i in range(3):
-	d1[keys[i]] = values[i]  
-print(d1)
+t1 = (11,22,33,44,55,66)
+t2 = t1[3:5]
+print(t2)

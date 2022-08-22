@@ -1,13 +1,5 @@
-dict1 = {
-"Ten":"10",
-"Twenty":"20",
-"Thirty":"30"
-}
-
-dict2 = {
-"Forty":"40",
-"Fifty":"50",
-"Sixty":"60"
-}
-dict1.update(dict2)
-print(dict1)
+t1 = (11,[22,33],44,55)
+newList = list(t1)
+newList[1][0] = 222
+t2 = tuple(newList)
+print(t2)
