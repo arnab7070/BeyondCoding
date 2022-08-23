@@ -59,6 +59,26 @@ bool searchNode(node* &head, int val){
     }
     return false;
 }
+void deleteAtFirst(node* &head){
+   if(head==NULL){
+      return;
+   }
+   node*temp=head;
+   head= head->next;
+   delete temp;
+   return;
+}
+void deleteAtLast(node* &head){
+   if(head==NULL){
+      return;
+   }
+   node* temp = head;
+   while(temp->next->next != NULL){
+        temp = temp->next;
+   }
+   delete temp->next->next;
+   temp->next = NULL;
+}
 int length(node* &head){
     int length = 0;
     node* temp = head;
@@ -68,6 +88,27 @@ int length(node* &head){
     }
     return length;
 }
+void deleteAtMiddle(node* &head, int key){
+    if(head==NULL){
+        return;
+    }
+    
+    node* temp = head;
+    node* prev = NULL;
+    // Else Search for the key to be deleted,
+    // keep track of the previous node as we
+    // need to change 'prev->next' 
+    while (temp != NULL && temp->data != key)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+    // Unlink the node from linked list
+    prev->next = temp->next;
+    // Free memory
+    delete temp;
+}
+
 node* reveseLinkedList(node* head){
     //Recursive Method
     if(head ==  NULL or head->next == NULL){
@@ -126,35 +167,37 @@ node* merge(node* a, node* b){
 }
 int main()
 {
-    // node* head = new node(4);
-    // insertAtTail(head,5);
-    // insertAtHead(head,1);
-    // // display(head);
-    // // cout<<searchNode(head,6)<<endl;
-    // // cout<<searchNode(head,1)<<endl;
-    // // cout<<length(head)<<endl;
-    // insertAtHead(head,10);
-    // // display(head);
-    // // cout<<length(head)<<endl;
-    // insertAtMiddle(head,8,2);
+    node* head = new node(4);
+    insertAtTail(head,5);
+    insertAtHead(head,1);
     // display(head);
-    // node* reversedHead = reveseLinkedList(head);
-    // display(reversedHead);
+    // cout<<searchNode(head,6)<<endl;
+    // cout<<searchNode(head,1)<<endl;
+    // cout<<length(head)<<endl;
+    insertAtHead(head,10);
+    // display(head);
+    // cout<<length(head)<<endl;
+    insertAtMiddle(head,8,2);
+    display(head);
+    deleteAtMiddle(head,1);
+    display(head);
+    node* reversedHead = reveseLinkedList(head);
+    display(reversedHead);
 
-    node *a = NULL;
-    insertAtHead(a,10);
-    insertAtHead(a,7);
-    insertAtHead(a,5);
-    insertAtHead(a,1);
+    // node *a = NULL;
+    // insertAtHead(a,10);
+    // insertAtHead(a,7);
+    // insertAtHead(a,5);
+    // insertAtHead(a,1);
     
 
-    node *b = NULL;
-    insertAtHead(b,6);
-    insertAtHead(b,3);
-    insertAtHead(b,2);
+    // node *b = NULL;
+    // insertAtHead(b,6);
+    // insertAtHead(b,3);
+    // insertAtHead(b,2);
 
-    node* head = merge(a,b);
-    display(head);
+    // node* head = merge(a,b);
+    // display(head);
     
     return 0;
 }
