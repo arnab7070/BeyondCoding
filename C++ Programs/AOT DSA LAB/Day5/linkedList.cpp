@@ -84,7 +84,7 @@ void reverse(node* &head){
 int main()
 {
     node* head = NULL;
-    system("clear");
+    system("cls");
     int target = 100;
     while(target != 0){
         cout<<"1.Insert Begin\n2.Insert End\n3.Delete Begin\n4.Delete End\n5.Display\n6.Search\n7.Reverse\n0.Quit\n";
