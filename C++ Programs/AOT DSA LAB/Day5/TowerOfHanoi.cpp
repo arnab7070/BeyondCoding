@@ -27,6 +27,7 @@ void TOH(int n, char src, char aux, char dest){
 }
 int main(){
 	int n;
+	cout<<"Enter the disk number: ";
 	cin>>n;
 	TOH(n,'A','B','C');
 	return 0;
