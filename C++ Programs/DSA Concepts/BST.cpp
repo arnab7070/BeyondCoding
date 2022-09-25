@@ -158,6 +158,13 @@ class BST{
         }
         return countNodes(root->right)+countNodes(root->left)+1;
     }
+
+    int maxNodeVal(node* root){
+        if(root==NULL){
+            return 0;
+        }
+        return max(max(maxNodeVal(root->right),root->data),max(maxNodeVal(root->left),root->data));
+    }
 };
 int main()
 {
@@ -179,6 +186,7 @@ int main()
     bst.printAtLevelK(root,1);
     cout<<endl;
     cout<<"Sum of all nodes: "<<bst.sumOfAllNodes(root)<<endl;
+    cout<<"Max node value is: "<<bst.maxNodeVal(root)<<endl;
     bst.replaceWithSum(root);
     bst.levelorder(root);
     if(bst.isBalancedTree(root)){
