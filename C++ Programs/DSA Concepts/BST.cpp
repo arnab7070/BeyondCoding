@@ -163,7 +163,20 @@ class BST{
         if(root==NULL){
             return 0;
         }
-        return max(max(maxNodeVal(root->right),root->data),max(maxNodeVal(root->left),root->data));
+        if(root->right==NULL){
+            return root->data;
+        }
+        maxNodeVal(root->right);
+    }
+
+    int minNodeVal(node* root){
+        if(root==NULL){
+            return 0;
+        }
+        if(root->left==NULL){
+            return root->data;
+        }
+        minNodeVal(root->left);
     }
 };
 int main()
@@ -186,7 +199,8 @@ int main()
     bst.printAtLevelK(root,1);
     cout<<endl;
     cout<<"Sum of all nodes: "<<bst.sumOfAllNodes(root)<<endl;
-    cout<<"Max node value is: "<<bst.maxNodeVal(root)<<endl;
+    cout<<"Maximum node value is: "<<bst.maxNodeVal(root)<<endl;
+    cout<<"Minimum node value is: "<<bst.minNodeVal(root)<<endl;
     bst.replaceWithSum(root);
     bst.levelorder(root);
     if(bst.isBalancedTree(root)){
