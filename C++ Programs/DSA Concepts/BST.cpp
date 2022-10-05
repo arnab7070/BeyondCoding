@@ -19,7 +19,8 @@ class BST{
     public:
     node* insert(node* root, int item){
         if(root==NULL){
-            return new node(item);
+            root = new node(item);
+            return root;
         }
         if(root->data > item){
             root->left = insert(root->left, item);
@@ -178,15 +179,63 @@ class BST{
         }
         minNodeVal(root->left);
     }
+    node* sortedArrayToBST(int arr[], int start, int end){
+        if(start>end){
+            return NULL;
+        }
+        int mid = (start+end)/2;
+        node* root = new node(arr[mid]);
+
+        root->left = sortedArrayToBST(arr,start,mid-1);
+        root->right = sortedArrayToBST(arr,mid+1,end);
+        
+        return root;
+    }
+
+    node* inorderSuccessor(node* root, node* target){
+
+        //If right subtree is present
+        if(target->right!=NULL){
+            node* temp = target->right;
+            while(temp!=NULL){
+                temp = temp->left;
+            }
+            return temp;
+        }
+        //Otherwise
+        node* temp = root;
+        node* succ = NULL;
+
+        while(temp!=NULL){
+            if(temp->data > target->data){
+                succ = temp;
+                temp = temp->left;
+            }
+            else if(temp->data < target->data){
+                temp = temp->right;
+            }
+            else{
+                break;
+            }
+        }
+
+        return succ;
+    }
 };
 int main()
 {
     BST bst;
-    node* root = new node(6);
-    bst.insert(root,4);
-    bst.insert(root,10);
-    bst.insert(root,5);
-    bst.insert(root,14);
+    node* root = NULL; //Creating a node
+    /*
+    // For Checking only the sortedArrayToBST function
+    int arr[7] = {1,2,3,4,5,6,7};
+    root = bst.sortedArrayToBST(arr,0,6);
+    */
+    root = bst.insert(root,6);
+    root = bst.insert(root,4);
+    root = bst.insert(root,10);
+    root = bst.insert(root,5);
+    root = bst.insert(root,14);
     bst.preorder(root);
     cout<<endl;
     bst.postorder(root);
@@ -196,6 +245,9 @@ int main()
     bst.levelorder(root);
     cout<<"Tree height is: "<<bst.treeHeight(root)<<endl;
     cout<<"Tree diameter is: "<<bst.diameter(root)<<endl;
+    node* t1 = root;
+    node* successor = bst.inorderSuccessor(root,t1);
+    cout<<"Inorder successor of 10: "<<successor->data<<endl;
     bst.printAtLevelK(root,1);
     cout<<endl;
     cout<<"Sum of all nodes: "<<bst.sumOfAllNodes(root)<<endl;
