@@ -14,11 +14,11 @@
 - Clone on your local machine
 
 ```terminal
-git clone https://github.com/fineanmol/Hacktoberfest2022.git
+git clone https://github.com/arnab7070/BeyondCoding.git
 ```
 - Navigate to project directory.
 ```terminal
-cd Hacktoberfest2022
+cd BeyondCoding
 ```
 
 - Create a new Branch
