@@ -6,6 +6,7 @@
 !*.c
 !*.py
 !*.ipynb
+!*.java
 # Or directories
 !*/
 !.gitignore
