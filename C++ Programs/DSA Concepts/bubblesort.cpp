@@ -1,38 +1,54 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
+void printArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+void bubbleSort(int arr[], int n)
+{
+    cout << "Sorting is in progress...\n";
+    // Bubble Sort Technique: Bigger element will place at the last of the array
+    // after swapping the elements
 
-   int n;
-//    cout<<"Enter how many numbers you want to store: ";
-   cin>>n;
-//    cout<<"Now enter the values....."<<endl;
-   int array[n];
-   for (int i = 0; i < n; i++)
-   {
-       cin>>array[i];
-   }
+    // to make it adaptive we have to use a flag to check if swapping really happened
+    // or not?? So we will now going to apply that
+    for (int i = 0; i < n - 1; i++)
+    {
+        // cout << "Round No: " << i << endl;
+        bool isSwapped = false;
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                isSwapped = true;
+                // cout << "Loop No: " << j << endl;
+                // cout << "Swapping " << arr[i] << " & " << arr[j] << endl;
+                swap(arr[i], arr[j]);
+            }
+        }
+        if (isSwapped == false)
+        {
+            break;
+        }
+    }
+    printArray(arr, n);
+}
 
-   int counter = 1;
-   while (counter<n)
-   {
-       for (int i = 0; i <= n-counter; i++)
-       {
-           if(array[i]>array[i+1]){
-               int temp = array[i];
-               array[i]=array[i+1];
-               array[i+1]=temp;
-           }
-       }
-       counter++;
-   }
-   
-//    cout<<"Running the sorting process....."<<endl;
-//    cout<<"The sorted values are"<<endl;
-   for (int i = 0; i < n; i++)
-   {
-       cout<<array[i]<<" ";
-   }
-   
+int main()
+{
+    int n;
+    cout << "Enter the number of elements to store in the array: ";
+    cin >> n;
+    int arr[n]; // Declaring an array to store elements
+    cout << "Now enter the elements of the array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    bubbleSort(arr, n);
 
-return 0;
+    return 0;
 }
