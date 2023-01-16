@@ -1,0 +1,5 @@
+input_list = input("Enter the numbers: ").split()
+removed = input_list.pop(4)
+input_list.insert(2, removed)
+input_list.insert(len(input_list), removed)
+print(input_list)
