@@ -7,6 +7,8 @@
 !*.py
 !*.ipynb
 !*.java
+!*.txt
+!*.pdf
 # Or directories
 !*/
 !.gitignore
