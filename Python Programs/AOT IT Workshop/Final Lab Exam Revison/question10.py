@@ -1,31 +1,15 @@
-import math
-lower_limit = int(input("Enter the lower limit: "))
-upper_limit = int(input("Enter the upper limit: "))
-# Function to return the reversed number
+n = int(input("Enter the value of n: "))
+m = int(input("Enter the value of m: "))
 
 
-def reverse(x):
-    ans = 0
-    while (x > 0):
-        temp = x % 10
-        ans = 10*ans + temp
-        x //= 10
-    return ans
-# Function to check the number is prime or not
+def evenOrOdd(number):
+    if number % 2 == 0:
+        print(f"{number} is even")
+    else:
+        print(f"{number} is odd")
 
 
-def isPrime(x):
-    if (x == 1):
-        return True
-    for i in range(2, int(math.sqrt(x))+1):
-        if (x % i == 0):
-            return False
-    return True
-
-
-ans = []
-for i in range(lower_limit, upper_limit+1):
-    if (i == reverse(i) and isPrime(i)):
-        ans.append(i)
-
-print(ans)
+for i in range(1, n+1):
+    if i % m == 0:  # condition for divisible
+        print(f"{i} is divisible by {m} & ", end=" ")
+        evenOrOdd(i)
