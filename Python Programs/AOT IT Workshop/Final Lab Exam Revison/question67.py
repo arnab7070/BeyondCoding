@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Create an x-axis with values from 1 to 10
+# Create an x-axis with values from 1 to n
 x = range(1, 6)
 
 # Create a y-axis for O(n)
