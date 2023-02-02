@@ -40,6 +40,7 @@ int main()
         cout<<min_heap.top()<<" ";
         min_heap.pop();
     }
+    cout<<endl;
     //Output should be like this -> 4 6 7 8
     return 0;
 }
