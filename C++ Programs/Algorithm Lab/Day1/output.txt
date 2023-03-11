@@ -1,0 +1,8 @@
+Total degree for the given Graph is = 16
+Total edges for the given Graph is = 8
+A: B, C, NULL
+B: A, D, E, NULL
+C: A, E, NULL
+D: B, E, F, NULL
+E: B, C, D, F, NULL
+F: D, E, NULL
