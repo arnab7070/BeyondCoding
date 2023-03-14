@@ -80,8 +80,10 @@ int main()
     }
     inputFile.close();
     // BFS Code
+    inputFile.open("output.txt", ios::out);
     int visited[n] = {0};
-    cout << char(0 + 65) << " ";
+    // cout << char(0 + 65) << " ";
+    inputFile << char(0 + 65) << " ";
     // we are starting from the first node over here
     enque(0);
     visited[0] = 1; // we set it as true
@@ -96,7 +98,8 @@ int main()
             {
                 enque(j);
                 visited[j] = 1;
-                cout << char(65 + j) << " ";
+                // cout << char(65 + j) << " ";
+                inputFile << char(65 + j) << " ";
             }
         }
     }
