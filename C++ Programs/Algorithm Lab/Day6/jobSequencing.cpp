@@ -76,6 +76,6 @@ int main()
     fillArray(arr, profit, deadline); // fill the array with required informations
     sort(arr, arr + n, compare);      // sort the array with respect to profit in descending order
     // calling the job sequencing function to get the maximum profit
-    cout << "Maximum Profit will be: " << jobSequencing(arr, gantt_chart, max_size);
+    cout << "Maximum Profit will be: " << jobSequencing(arr, gantt_chart, max_size) << endl;
     return 0;
 }
