@@ -3,8 +3,6 @@
 // (p1, p2, ..., p7) = (10, 5, 15, 7, 6, 18, 3)
 // and (w1, w2, ..., w7) = (2, 3, 5, 7, 1, 4, 1).
 #include <iostream>
-#include <algorithm>
-
 using namespace std;
 // class for fractional knapsack
 class Item
@@ -15,15 +13,23 @@ public:
     double ratio;
 };
 
-// making the customized comparator function
-bool compare(Item a, Item b)
+void bubbleSort(Item items[], int n)
 {
-    return a.ratio > b.ratio;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (items[j].ratio < items[j + 1].ratio)
+            {
+                swap(items[j], items[j + 1]);
+            }
+        }
+    }
 }
 
 double fractionalKnapsack(int W, Item items[], int n)
 {
-    sort(items, items + n, compare);
+    bubbleSort(items, n);
     double max_value = 0.0;
     for (int i = 0; i < n; i++)
     {
