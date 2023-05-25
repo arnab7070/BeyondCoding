@@ -10,7 +10,7 @@ void maxMin(int *arr, int start, int end, int &max, int &min)
         return;
     }
     // if just two element present
-    else if (end == start - 1)
+    else if (start == end - 1)
     {
         if (arr[start] > arr[end])
         {

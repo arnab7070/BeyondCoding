@@ -123,7 +123,7 @@ void dijkastraAlgorithm(int *distance, bool *visited, priority_queue &pq, int n,
         }
     }
     // For printing the all pair shortest path distance
-    cout << "All pair shortest path for the source " << sourceVertex << endl;
+    cout << "All pair shortest path for the source " << char('A' + sourceVertex) << endl;
     for (int i = 0; i < n; i++)
     {
         cout << "(" << char('A' + sourceVertex) << "," << char('A' + i) << ") -> " << distance[i] << endl;
